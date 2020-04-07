@@ -1,2 +1,18 @@
-# vue-webgl-components
- 基于vue框架，使用SuperMap进行组件开发，最终打包提供单个js库进行使用
+# vue-webgl-plugin
+
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
