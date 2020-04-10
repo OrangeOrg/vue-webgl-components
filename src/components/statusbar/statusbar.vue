@@ -2,7 +2,7 @@
  * @Author: juzi.liu 
  * @Date: 2020-03-30 11:53:18 
  * @Last Modified by: juzi.liu
- * @Last Modified time: 2020-03-31 16:42:02
+ * @Last Modified time: 2020-04-07 10:21:40
  */
 <template>
   <div class="statusbar">
@@ -25,17 +25,17 @@ export default {
   },
   methods: {
     addEvt() {
-        let _that = this;
+      let _that = this;
       if (this.$globe.viewer) {
         let scene = this.$globe.viewer.scene;
-       
+
         _that.$globe.viewer.screenSpaceEventHandler.setInputAction(e => {
           _that.mouseEvtCallback(e.endPosition, scene);
         }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
       } else {
-        setTimeout(function(){
-            _that.addEvt()
-        },1000)
+        setTimeout(function() {
+          _that.addEvt();
+        }, 1000);
       }
     },
     mouseEvtCallback(p, scene) {
@@ -57,26 +57,27 @@ export default {
         // let latitude = Cesium.Math.toDegrees(cartographic.latitude);
         let cameraheight = cameracartographic.height;
 
-        this.$data.x ="经度："+ this.formatDegree(longitude);
-        this.$data.y ="纬度："+ this.formatDegree(latitude);
+        this.$data.x = "经度：" + this.formatDegree(longitude);
+        this.$data.y = "纬度：" + this.formatDegree(latitude);
 
-        height=height > 0
+        height =
+          height > 0
             ? height > 1000
               ? (height / 1000).toFixed(2) + "千米"
               : height.toFixed(2) + "米"
             : 0 + "米";
-        this.$data.z ="高度："+height
-        cameraheight=  cameraheight > 1000
+        this.$data.z = "高度：" + height;
+        cameraheight =
+          cameraheight > 1000
             ? (cameraheight / 1000).toFixed(2) + "千米"
             : cameraheight.toFixed(2) + "米";
-        this.$data.cameraZ ="相机高度："+cameraheight
-         
+        this.$data.cameraZ = "相机高度：" + cameraheight;
       }
     },
     formatDegree(value) {
       ///<summary>将度转换成为度分秒</summary>
 
-    //   value = Math.abs(value);
+      //   value = Math.abs(value);
       var v1 = Math.floor(value); //度
       var v2 = Math.floor((value - v1) * 60); //分
       // var v3 = Math.round(((value - v1) * 3600) % 60); //秒
@@ -98,8 +99,8 @@ export default {
   },
   mounted: function() {
     //等待viewer初始化完成，用延时始终感觉不是很合理
-    let _that = this;  
-      _that.addEvt();
+    let _that = this;
+    _that.addEvt();
   }
 };
 </script>
