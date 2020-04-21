@@ -2,7 +2,6 @@
   <div id="app">
     <customheader title="CustomDemo"></customheader>
     <customboard></customboard>
-    <!-- <viewer></viewer> -->
     <viewer sceneurl="http://www.supermapol.com/realspace/services/3D-Olympic/rest/realspace"></viewer>
     <statusbar></statusbar>
   </div>

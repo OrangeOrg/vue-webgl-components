@@ -1,15 +1,15 @@
 var path = require('path')
 var webpack = require('webpack')
-var UglifyJsPlugin =require('uglifyjs-webpack-plugin')
+// var UglifyJsPlugin =require('uglifyjs-webpack-plugin')
 // const ASSET_PATH = process.env.ASSET_PATH || '/';
 module.exports = {
-  //entry: './src/main.js',
+  entry: './src/main.js',//vue直接运行目录
   //entry: './src/components/viewer/index.js',
-  entry: './src/components/index.js',
+  //entry: './src/components/index.js',//打包修改目录
   output: {
     path: path.resolve(__dirname, './dist'),
-    //publicPath: '/dist/',
-    publicPath: './',
+    publicPath: '/dist/',
+    //publicPath: './',
     //filename:'build.js'
     filename: 'vue-webgl-plugin.js',
     library: 'vue-webgl-plugin',

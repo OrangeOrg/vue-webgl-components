@@ -2,7 +2,7 @@
  * @Author: juzi.liu 
  * @Date: 2020-03-23 08:52:50 
  * @Last Modified by: juzi.liu
- * @Last Modified time: 2020-03-31 17:21:30
+ * @Last Modified time: 2020-04-21 11:50:39
  */
 
 <template>
@@ -31,9 +31,6 @@
   </div>
 </template>
 <script>
-const CesiumPath = "static/Cesium";
-const prettycsspath = "static/Cesium/pretty.css";
-
 export default {
   name: "viewer",
   data() {
@@ -90,7 +87,7 @@ export default {
     },
     //异步加载资源，等同于promise，资源路径存放在globe.js中
     async beforeInit() {
-      await this.getCesiumScript(CesiumPath, prettycsspath);
+      await this.getCesiumScript(this.$globe.CesiumPath, this.$globe.prettycsspath);
     },
     init() {
       if (this.$globe.Viewer) {
