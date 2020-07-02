@@ -18,7 +18,8 @@ export default {
         height: 60px;
         left: 0;
         width: 100%;
-        background: url('../../assets/boardtop.png');
+        background: url('../../assets/boardtop.png') no-repeat;
+        background-size: 100% 100%;
         background-color: rgba(0, 0, 0, 0);
         z-index: 99999;
     }
@@ -28,7 +29,8 @@ export default {
         height: 1020px;
         left: 0;
         width: 55px;
-        background: url('../../assets/boardleft.png');
+        background: url('../../assets/boardleft.png') no-repeat;
+         background-size: 100% 100%;
         background-color: rgba(0, 0, 0, 0);
         z-index: 99999;
     }
@@ -38,7 +40,8 @@ export default {
         height: 33px;
         left: 0;
         width: 100%;
-        background: url('../../assets/boardbottom.png');
+        background: url('../../assets/boardbottom.png') no-repeat;
+        background-size: 100% 100%;
         background-color: rgba(0, 0, 0, 0);
         z-index: 99999;
     }
@@ -48,7 +51,8 @@ export default {
         height: 1020px;
         right: 0;
         width: 55px;
-        background: url('../../assets/boardright.png');
+        background: url('../../assets/boardright.png') no-repeat;
+         background-size: 100% 100%;
         background-color: rgba(0, 0, 0, 0);
         z-index: 99999;
     }

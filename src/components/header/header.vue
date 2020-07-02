@@ -21,10 +21,11 @@ export default {
     .header{
         position: absolute;
         top: 0;
-        height: 137px;
+        height: 70px;
         left: 0;
         width: 100%;
-        background: url('../../assets/header.png');
+        background: url('../../assets/header.png') no-repeat;
+        background-size: 100% 100%;
         background-color: rgba(0, 0, 0, 0);
         text-align: center;
         color: whitesmoke;
@@ -40,6 +41,6 @@ export default {
         vertical-align: middle;
         font-size: 32px;
         color: whitesmoke;
-        margin-top: 55px;
+        margin-top: 15px;
     }
 </style>

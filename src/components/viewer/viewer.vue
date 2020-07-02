@@ -2,7 +2,7 @@
  * @Author: juzi.liu 
  * @Date: 2020-03-23 08:52:50 
  * @Last Modified by: juzi.liu
- * @Last Modified time: 2020-04-21 11:50:39
+ * @Last Modified time: 2020-06-23 09:31:56
  */
 
 <template>
@@ -87,7 +87,10 @@ export default {
     },
     //异步加载资源，等同于promise，资源路径存放在globe.js中
     async beforeInit() {
-      await this.getCesiumScript(this.$globe.CesiumPath, this.$globe.prettycsspath);
+      await this.getCesiumScript(
+        this.$globe.CesiumPath,
+        this.$globe.prettycsspath
+      );
     },
     init() {
       if (this.$globe.Viewer) {
@@ -119,11 +122,11 @@ export default {
   },
   mounted: function() {
     var _that = this;
-    // self
-    //   .getCesiumScript(self.$globe.CesiumPath, self.$globe.prettycsspath)
+    // _that
+    //   .getCesiumScript(_that.$globe.CesiumPath, _that.$globe.prettycsspath)
     //   .then(() => {
-    //     self.$nextTick(() => {
-    //       self.init();
+    //     _that.$nextTick(() => {
+    //       _that.init();
     //     });
     //   });
 
@@ -138,9 +141,9 @@ export default {
   bottom: 25px !important;
 }
 .customCesium {
-  background: url('../../assets/bg1.png');
+  background: url("../../assets/bg1.png");
 }
-.cesium-credit-logoContainer{
+.cesium-credit-logoContainer {
   display: none !important;
 }
 </style>
